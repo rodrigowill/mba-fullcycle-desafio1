@@ -1,5 +1,4 @@
 import os
-#from pathlib import Path
 from dotenv import load_dotenv
 
 from langchain_community.document_loaders import PyPDFLoader
@@ -13,14 +12,8 @@ for k in ("GOOGLE_API_KEY", "PGVECTOR_URL", "PGVECTOR_COLLECTION"):
     if not os.getenv(k):
         raise RuntimeError(f"Environment variable {k} is not set")
 
-#loader = PyPDFLoader("performance.pdf")
-#loader = PyPDFLoader("agile-test.pdf")
-loader = PyPDFLoader("team-topologies.pdf")
+loader = PyPDFLoader("performance.pdf")
 docs = loader.load()
-
-#current_dir = Path(__file__).parent
-#pdf_path = current_dir / "Foundation-Agile-Syllabus.pdf"
-#docs = PyPDFLoader(str(pdf_path)).load()
 
 splits = RecursiveCharacterTextSplitter(
     chunk_size=1000,

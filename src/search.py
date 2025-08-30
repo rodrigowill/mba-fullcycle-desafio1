@@ -8,9 +8,7 @@ for k in ("GOOGLE_API_KEY", "PGVECTOR_URL", "PGVECTOR_COLLECTION"):
     if not os.getenv(k):
         raise RuntimeError(f"Environment variable {k} is not set")
     
-#query = "Tell me more about th types of performance testing and theirs difference and application"
-#query = "How can I work with agile testing in my software development company?"
-query = "what's team topology and how can i implement it in my technology team?"
+query = "Tell me more about th types of performance testing and theirs difference and application"
 
 embeddings = GoogleGenerativeAIEmbeddings(model=os.getenv("GEMINI_MODEL", "gemini-embedding-004"))
 
