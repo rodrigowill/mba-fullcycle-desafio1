@@ -9,7 +9,7 @@ load_dotenv()
 
 def main():
     """Função principal do chat"""
-    print("🤖 Chat sobre Teste de Performance")
+    print("Chat sobre Teste de Performance")
     print("=" * 40)
     print("Digite 'sair' para encerrar o chat")
     print("=" * 40)
@@ -26,7 +26,7 @@ def main():
                 
                 # Verificar se quer sair
                 if user_question.lower() in ['sair', 'exit', 'quit', 'q']:
-                    print("👋 Até logo!")
+                    print("Até logo!")
                     break
                 
                 # Verificar se a entrada não está vazia
@@ -71,15 +71,15 @@ def main():
                 print()
                 
             except KeyboardInterrupt:
-                print("\n👋 Chat interrompido pelo usuário. Até logo!")
+                print("\nChat interrompido pelo usuário. Até logo!")
                 break
             except Exception as e:
-                print(f"❌ Erro: {e}")
+                print(f"Erro: {e}")
                 print("Tente novamente ou digite 'sair' para encerrar.")
                 print()
                 
     except Exception as e:
-        print(f"❌ Erro ao inicializar o chat: {e}")
+        print(f"Erro ao inicializar o chat: {e}")
         print("Verifique sua conexão com a internet e a validade da API key.")
 
 if __name__ == "__main__":
